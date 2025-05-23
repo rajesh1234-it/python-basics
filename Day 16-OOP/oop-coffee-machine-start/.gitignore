@@ -1,0 +1,41 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+.env
+venv/
+*.egg-info/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log
+dist/
+build/
+
+# Java
+*.class
+*.jar
+target/
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# Build outputs
+build/
+dist/
+coverage/
+
+# Secrets
+.env
+*.pem
+*.key
