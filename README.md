@@ -1,2 +1,2 @@
 # python-basics
-# This is Python basic progarms
+This is Python basic progarms
