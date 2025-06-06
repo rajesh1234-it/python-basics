@@ -3,20 +3,20 @@
 
 # ---
 
-### 🐢 Full Code With `pygame` Sound:
+###  Full Code With `pygame` Sound:
 
 import turtle
 import random
 import time
 import threading
-import pygame  # ✅ Replaces playsound
+import pygame  # Replaces playsound
 
 # Initialize pygame mixer for sound
 pygame.mixer.init()
 
 # --- Setup screen ---
 screen = turtle.Screen()
-screen.title("🐢 Turtle Catch Challenge")
+screen.title("Turtle Catch Challenge")
 screen.bgcolor("lightblue")
 screen.setup(width=600, height=600)
 screen.tracer(0)  # Turn off auto animation
@@ -59,7 +59,7 @@ pen.write("Score: 0  Time: 30", align="center", font=("Arial", 16, "bold"))
 # --- Sound function ---
 def play_sound():
     try:
-        sound = pygame.mixer.Sound("collect.wav")  # ✅ Ensure this file exists
+        sound = pygame.mixer.Sound("collect.wav")  #Ensure this file exists
         sound.play()
     except:
         print("Sound file not found or error playing sound.")
@@ -98,7 +98,7 @@ def countdown():
         pen.write(f"Score: {score}  Time: {time_left}", align="center", font=("Arial", 16, "bold"))
     game_running = False
     pen.goto(0, 0)
-    pen.write("⏰ Time's up! Game Over!", align="center", font=("Arial", 18, "bold"))
+    pen.write("Time's up! Game Over!", align="center", font=("Arial", 18, "bold"))
 
 # Start countdown in background
 threading.Thread(target=countdown, daemon=True).start()
@@ -110,7 +110,7 @@ while game_running:
     if player.distance(food) < 20:
         food.goto(random.randint(-280, 280), random.randint(-280, 280))
         score += 1
-        play_sound()  # ✅ Play sound using pygame
+        play_sound()  #Play sound using pygame
         pen.clear()
         pen.write(f"Score: {score}  Time: {time_left}", align="center", font=("Arial", 16, "bold"))
 
